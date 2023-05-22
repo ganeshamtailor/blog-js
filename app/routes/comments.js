@@ -1,4 +1,4 @@
-const{ index, create, show, update, destroy}= require("../controllers/comments")
+const{ create, show, update, destroy}= require("../controllers/comments")
 
 const router = require("express").Router()
 
