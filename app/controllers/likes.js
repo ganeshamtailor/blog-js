@@ -34,19 +34,13 @@ exports.show = async (req, res) => {
 
 exports.create = async (req, res) => {
   try {
-    if(req.body && req.body.like && req.body.dislike){
-        res.status(422).send({
-            message: "Cannot like and dislike both"
-        })
-    }
-    else{
     const like = await Like.create({
       ...req.body
     })
 
     if (like)
-      res.send(like)
-  }}
+    res.send(like)
+  }
   catch (err) {
     res.status(422).send({
       message: err.message

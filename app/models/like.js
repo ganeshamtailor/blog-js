@@ -3,17 +3,17 @@ const mongoose = require('mongoose');
 const likeSchema = new mongoose.Schema({
 like: {
       type: Boolean,
-   },
-dislike: {
-    type: Boolean,
-    },   
+      required : true
+   },   
 post: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Post'
+      ref: 'Post',
+      required : true
    },
 user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
+      ref: 'User',
+      required : true
    }
 })
 

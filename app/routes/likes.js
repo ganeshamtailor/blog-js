@@ -2,7 +2,6 @@ const { index, show, create, update, destroy } = require("../controllers/likes")
 
 const router = require("express").Router()
 
-router.get("/", index)
 router.get("/:id", show)
 router.post("/", create)
 router.put("/:id", update)
